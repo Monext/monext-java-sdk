@@ -36,11 +36,11 @@ pipeline {
             steps {
                 withSonarQubeEnv('SonarMonext') {
                     script {
-                        if (BRANCH_NAME == 'master') {
+                        if (BRANCH_NAME == 'main') {
                             sh 'mvn sonar:sonar -Dsonar.branch.name=${BRANCH_NAME}'
                         }
-                        if (BRANCH_NAME != 'master') {
-                            sh 'mvn sonar:sonar -Dsonar.branch.name=${BRANCH_NAME} -Dsonar.branch.target=master'
+                        if (BRANCH_NAME != 'main') {
+                            sh 'mvn sonar:sonar -Dsonar.branch.name=${BRANCH_NAME} -Dsonar.branch.target=main'
                         }
                     }
                 }
@@ -48,7 +48,7 @@ pipeline {
         }
 
         stage('Deploy') {
-            when { branch 'master' }
+            when { branch 'main' }
             steps {
                 withCredentials([string(credentialsId: 'KEY_GPG_PASSPHRASE', variable: 'KEY_GPG_PASSPHRASE'),
                                  usernamePassword(credentialsId: 'OSSRH', usernameVariable: 'OSSRH_USER', passwordVariable: 'OSSRH_PWD')]) {
