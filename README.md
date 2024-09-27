@@ -1,12 +1,12 @@
-# Payline Java SDK
+# Monext Java SDK
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.payline/payline-java-sdk/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.payline/payline-java-sdk)
 
-The Payline API provides access to the various functions of the Payline payment solution. It is
+The Monext API provides access to the various functions of the Monext payment solution. It is
 based on standard web service components, which include the SOAP protocol, the WSDL and
 XSD definition languages. These standards are supported by a large range of development tools
 on multiple platforms.
 
-This SDK covers all the functions of the Payline payment solution.
+This SDK covers all the functions of the Monext payment solution.
 ## Features
 The set of web services Payline is covered by this library. Web services are divided into four classes: 
 * DirectPayment
@@ -25,7 +25,7 @@ Add this dependency in your project's POM:
 <dependency>
   <groupId>com.payline</groupId>
   <artifactId>payline-java-sdk</artifactId>
-  <version>4.77</version>
+  <version>4.77.1</version>
 </dependency>
 ```
 
@@ -101,10 +101,9 @@ public class SampleCalls {
 ## Version
 4.77
 
-## Learn about Payline
-* [www.payline.com](https://www.monext.fr/en/online)
-* [support payline](https://support.payline.com/hc/en-us)
-* [Getting Started Guide](https://docs.payline.com/display/DT/Getting+Started+Guide)
+## Learn about Monext
+* [www.monext.fr](https://www.monext.fr/en/online)
+* [Getting Started Guide](https://docs.monext.fr/display/DT/Getting+Started+Guide)
 
 *For assistance, advice or an answer to your question, contact Payline Support by email at*
 `support@payline.com`
